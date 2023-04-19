@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="boot.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-0">
+            <div class="col align-self-center col-sm-2">
+                <h5 id="showIn"><b>GUESS:</b></h5> 
+            </div>
+           
+            <div class="col">
+                <button class="btn btn-primary" id="startBtn">PRESS TO START</button>
+                <button class="btn btn-primary" id="guessBtn"></button>
+            </div>
+        </div> 
+        <br>
+        <div class="row">
+            <div class="col">
+                <p id="instructions">Think of a number between 1-100 and click the blue button when you're ready.</p>
+                <p>P.S. Click on body text items to remove (GUESS button to add back)</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group" role="group">
+                    <button id="yesBtn" class="btn btn-success">YES</button>
+                    <button id="noBtn" class="btn btn-danger">NO</button>
+                    <button id="resetBtn" class="btn btn-success">RESET</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button id="higherBtn" class="btn btn-dark">HIGHER</button>
+                    <button id="lowerBtn" class="btn btn-light">LOWER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Explanation -->
+    <hr />
+    <p id="hideIn">This game demonstrates a classic programming algorithm: <strong>binary search</strong>. When tasked with finding a number within a range using binary search, the computer will always guess in the middle of the range. By using this algorithm, it will find your number in 7 or less tries every time (for 100 numbers) -- a vast performance improvement over a random or sequential search.</p>
+    <p id="hideIn2">Original concept was a codepen by Minae Lee; this version is an adaptation of the original, using some fun CSS with JS fleshed out by PGA.</p>
+    
+
+<script src="boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {  
+    margin: 5rem 5rem 15rem 5rem;
+    background-color: black;
+    color: aqua;
+    cursor:  pointer;
+    font-family: papyrus;
+    font-weight: 400;
+  }
+
+body:hover {
+    margin: 5rem 5rem 15rem 5rem;
+    color: #c07ae6;
+    background-color: black;
+    font-family: papyrus;
+    font-weight: 900;
+  }
+  
+ 
+  
+  
+  ol {
+    counter-reset: n;
+  }
+  
+  ol > li {
+    list-style: none;
+    counter-increment: n;
+  }
+  
+  ol > li::before {
+    content: "Challenge " counter(n) ":";
+    font-weight: bold;
+  }
+  
+  .btn {
+    display: none;
+    color: aqua;
+    font-size: 24px;
+    border: 5px solid rgb(88,88,104);
+    cursor: pointer;
+    padding: 15px 25px;
+    text-align: center;
+    float: center;
+  }
+  
+  .btn:hover {
+      display: none;
+      color: black;
+      border: 5px solid grey;
+      background-color: aqua;
+      
+  }
+  
+  #startBtn{
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    color:aqua;
+    background-color: blue;
+    border: 5px solid grey;
+    border-radius: 15px;
+    box-shadow: 0 8px rgb(88, 88, 104);
+  }
+  
+  #startBtn:hover{
+    color: black;
+    background-color: aqua;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 8px blue;
+  }
+  
+  #startBtn:active{
+    background-color: rgb(88, 88, 104);
+    color: aqua;
+    box-shadow: 0 5px rgb(120, 120, 120);
+    transform: translateY(5px);
+  }
+  
+  #yesBtn {
+      background-color: darkgreen;
+  }
+  
+  #noBtn {
+      background-color: crimson;
+  }
+  #yesBtn:hover, #noBtn:hover{
+      background-color: aqua;
+  }
+  
+  
