@@ -71,10 +71,10 @@ body:hover {
   }
   
   #startBtn:active{
-    background-color: rgb(88, 88, 104);
+    background-color: black;
     color: aqua;
-    box-shadow: 0 5px rgb(120, 120, 120);
-    transform: translateY(5px);
+    box-shadow: 0 5px aqua;
+    transform: translateY(15px);
   }
   
   #yesBtn {
