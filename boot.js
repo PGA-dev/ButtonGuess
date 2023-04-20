@@ -15,7 +15,7 @@ const resetBtn = document.querySelector("#resetBtn");
 //click hide
 const hideI = document.querySelector("#hideI");
 const hid = document.querySelector("#hideIn");
-
+const hid2 = document.querySelector("#hideIn2");
 startBtn.addEventListener("click", tryGuess);
 yesBtn.addEventListener("click", rightGuess);
 noBtn.addEventListener("click", wrongGuess);
@@ -31,24 +31,24 @@ hideI.addEventListener("click", hide);
 toggleBtns([hideI], true);
 toggleBtns([startBtn], true);
 
-function tryGuess(){ 
+function tryGuess() {
     if (!nGuesses) { // first time guessing
         toggleBtns([startBtn], false);
         toggleBtns([guessBtn], true);
     }
     nGuesses++;
- 
-    currGuess = Math.floor((max - min)/2) + min;
+
+    currGuess = Math.floor((max - min) / 2) + min;
     console.log(`Guessing between ${min} and ${max} - guessing ${currGuess} - this is guess number ${nGuesses}`);
     guessBtn.textContent = currGuess + "!";
     message.textContent = "Am I correct?";
     toggleBtns([yesBtn, noBtn], true);
 }
 
-function toggleBtns(btnsArray, on) { 
+function toggleBtns(btnsArray, on) {
     for (const btn of btnsArray) {
         if (on) {
-            btn.style.display = "inline-block"; 
+            btn.style.display = "inline-block";
         } else {
             btn.style.display = "none";
         }
@@ -65,34 +65,34 @@ function rightGuess() {
 function wrongGuess() {
     toggleBtns([yesBtn, noBtn], false);
     toggleBtns([higherBtn, lowerBtn], true);
-    message.textContent = `Is your number higher or lower than ${currGuess}?`;   
-} 
-  
+    message.textContent = `Is your number higher or lower than ${currGuess}?`;
+}
+
 function numIsHigher() {
     min = currGuess + 1;
     console.log("Changing the minimum to: " + min);
     toggleBtns([higherBtn, lowerBtn], false);
-    if (currGuess === 100){
+    if (currGuess === 100) {
 
         sillyGuess();
     }
-    else{
+    else {
         tryGuess();
-}
+    }
 }
 
 function numIsLower() {
     max = currGuess - 1;
     console.log("Changing the maximum to: " + max);
     toggleBtns([higherBtn, lowerBtn], false);
-    if (currGuess === 0){
+    if (currGuess === 0) {
         sillyGuess();
-    }else{
+    } else {
         tryGuess();
-}
+    }
 }
 
-function resetGame(){  
+function resetGame() {
     nGuesses = 0;
     currGuess = 0;
     min = 1;
@@ -101,7 +101,7 @@ function resetGame(){
     toggleBtns([guessBtn], false);
     toggleBtns([resetBtn], false);
     toggleBtns([hideI], true);
-    message.textContent = `Think of a number between 1-100 and click the blue button when you're ready.`; 
+    message.textContent = `Think of a number between 1-100 and click the blue button when you're ready.`;
 }
 
 function sillyGuess() {
@@ -112,19 +112,21 @@ function sillyGuess() {
     toggleBtns([guessBtn], false);
     message.textContent = `You are either cheating or are silly!`;
     toggleBtns([resetBtn], true);
-} 
-
-function hide() {
-    
-
-    if (hid.style.display === "none") {
-        hid.style.display = "block";
-      } else {
-        hid.style.display = "none";
-      }
-    console.log(`hide`)
 }
 
+function hide() {
+    if (hid.style.display === "none") {
+        hid.style.display = "block";
+    } else {
+        hid.style.display = "none";
+    }
+    if (hid2.style.display === "none") {
+        hid2.style.display = "block";
+    } else {
+        hid2.style.display = "none";
+    }
+    console.log(`hide`)
+}
 
 //$jQuerry for challenge text bye bye, a dream of every NuCamper
 // $(function () {
