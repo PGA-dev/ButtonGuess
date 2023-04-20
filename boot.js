@@ -13,9 +13,8 @@ const guessBtn = document.querySelector("#guessBtn");
 const message = document.querySelector("#instructions");
 const resetBtn = document.querySelector("#resetBtn");
 //click hide
-const hideIn = document.querySelector("#hideIn");
-const hideIn2 = document.querySelector("#hideIn2");
-const showIn = document.querySelector("#showIn");
+const hideI = document.querySelector("#hideI");
+const hid = document.querySelector("#hideIn");
 
 startBtn.addEventListener("click", tryGuess);
 yesBtn.addEventListener("click", rightGuess);
@@ -24,12 +23,12 @@ higherBtn.addEventListener("click", numIsHigher);
 resetBtn.addEventListener("click", resetGame);
 lowerBtn.addEventListener("click", numIsLower);
 
+
 //click hide event add
-hideIn.addEventListener("click", hide);
-// hideIn2.addEventListener('click', hide);
-// showIn.addEventListener('click', show);
+hideI.addEventListener("click", hide);
+// showIn.addEventListener("click", show);
 
-
+toggleBtns([hideI], true);
 toggleBtns([startBtn], true);
 
 function tryGuess(){ 
@@ -101,6 +100,7 @@ function resetGame(){
     toggleBtns([startBtn], true);
     toggleBtns([guessBtn], false);
     toggleBtns([resetBtn], false);
+    toggleBtns([hideI], true);
     message.textContent = `Think of a number between 1-100 and click the blue button when you're ready.`; 
 }
 
@@ -115,14 +115,17 @@ function sillyGuess() {
 } 
 
 function hide() {
-    hideIn.remove();
+    
+
+    if (hid.style.display === "none") {
+        hid.style.display = "block";
+      } else {
+        hid.style.display = "none";
+      }
     console.log(`hide`)
 }
 
 
-// const show = () => {
-    
-// }
 //$jQuerry for challenge text bye bye, a dream of every NuCamper
 // $(function () {
 //     $("#hideIn").on("click", function () {
