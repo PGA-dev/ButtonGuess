@@ -107,13 +107,46 @@ function sillyGuess() {
 
 //$jQuerry for challenge text bye bye, a dream of every NuCamper
 $(function () {
-  $("#hideIn").on("click", function () {
-    $("#hideIn").hide();
-  });
-  $("#showIn").on("click", function () {
-    $("#hideIn").show();
-  });
-  $("#hideIn2").on("click", function () {
-    $("#hideIn2").hide();
-  });
+    $("#hideIn").on("click", function () {
+        $("#hideIn").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideIn").show();
+      });
+      $("#hideIn2").on("click", function () {
+        $("#hideIn2").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideIn2").show();
+      });
+      $("#hideIn3").on("click", function () {
+        $("#hideIn3").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideIn3").show();
+      });
+      $("#hideIn4").on("click", function () {
+        $("#hideIn4").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideIn4").show();
+      });
+        $("#hideH").on("click", function () {
+        $("#hideH").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideH").show();
+      });
+        $("#hideIn5").on("click", function () {
+        $("#hideIn5").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideIn5").show();
+      });
+        $("#hideH2").on("click", function () {
+        $("#hideH2").hide();
+      });
+      $("#showIn").on("click", function () {
+        $("#hideH2").show();
+      });
 });
