@@ -12,6 +12,10 @@ const startBtn = document.querySelector("#startBtn");
 const guessBtn = document.querySelector("#guessBtn");
 const message = document.querySelector("#instructions");
 const resetBtn = document.querySelector("#resetBtn");
+//click hide
+const hideIn = document.querySelector("#hideIn");
+const hideIn2 = document.querySelector("#hideIn2");
+const showIn = document.querySelector("#showIn");
 
 startBtn.addEventListener("click", tryGuess);
 yesBtn.addEventListener("click", rightGuess);
@@ -19,6 +23,11 @@ noBtn.addEventListener("click", wrongGuess);
 higherBtn.addEventListener("click", numIsHigher);
 resetBtn.addEventListener("click", resetGame);
 lowerBtn.addEventListener("click", numIsLower);
+
+//click hide event add
+hideIn.addEventListener("click", hide);
+// hideIn2.addEventListener('click', hide);
+// showIn.addEventListener('click', show);
 
 
 toggleBtns([startBtn], true);
@@ -105,48 +114,57 @@ function sillyGuess() {
     toggleBtns([resetBtn], true);
 } 
 
+function hide() {
+    hideIn.remove();
+    console.log(`hide`)
+}
+
+
+// const show = () => {
+    
+// }
 //$jQuerry for challenge text bye bye, a dream of every NuCamper
-$(function () {
-    $("#hideIn").on("click", function () {
-        $("#hideIn").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideIn").show();
-      });
-      $("#hideIn2").on("click", function () {
-        $("#hideIn2").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideIn2").show();
-      });
-      $("#hideIn3").on("click", function () {
-        $("#hideIn3").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideIn3").show();
-      });
-      $("#hideIn4").on("click", function () {
-        $("#hideIn4").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideIn4").show();
-      });
-        $("#hideH").on("click", function () {
-        $("#hideH").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideH").show();
-      });
-        $("#hideIn5").on("click", function () {
-        $("#hideIn5").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideIn5").show();
-      });
-        $("#hideH2").on("click", function () {
-        $("#hideH2").hide();
-      });
-      $("#showIn").on("click", function () {
-        $("#hideH2").show();
-      });
-});
+// $(function () {
+//     $("#hideIn").on("click", function () {
+//         $("#hideIn").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideIn").show();
+//       });
+//       $("#hideIn2").on("click", function () {
+//         $("#hideIn2").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideIn2").show();
+//       });
+//       $("#hideIn3").on("click", function () {
+//         $("#hideIn3").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideIn3").show();
+//       });
+//       $("#hideIn4").on("click", function () {
+//         $("#hideIn4").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideIn4").show();
+//       });
+//         $("#hideH").on("click", function () {
+//         $("#hideH").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideH").show();
+//       });
+//         $("#hideIn5").on("click", function () {
+//         $("#hideIn5").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideIn5").show();
+//       });
+//         $("#hideH2").on("click", function () {
+//         $("#hideH2").hide();
+//       });
+//       $("#showIn").on("click", function () {
+//         $("#hideH2").show();
+//       });
+// });
