@@ -16,6 +16,7 @@ const resetBtn = document.querySelector("#resetBtn");
 const hideI = document.querySelector("#hideI");
 const hid = document.querySelector("#hideIn");
 const hid2 = document.querySelector("#hideIn2");
+
 startBtn.addEventListener("click", tryGuess);
 yesBtn.addEventListener("click", rightGuess);
 noBtn.addEventListener("click", wrongGuess);
